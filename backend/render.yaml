@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: task-manager-backend
+    env: python
+    region: oregon
+    buildCommand: ""
+    startCommand: uvicorn main:app --host 0.0.0.0 --port 10000
+    plan: free
+    envVars:
+      - key: SUPABASE_URL
+        value: https://nvsivqbqxvktdtnxfavm.supabase.co
+      - key: SUPABASE_KEY
+        value: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im52c2l2cWJxeHZrdGR0bnhmYXZtIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTE3OTYxMjcsImV4cCI6MjA2NzM3MjEyN30.2HHVcJVs0BpKBv2ObpNJ8q_S8x7t9l5u0UwzRKCK3yA
