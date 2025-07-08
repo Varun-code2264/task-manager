@@ -5,7 +5,7 @@ export default function Home() {
   const [tasks, setTasks] = useState([]);
 
   useEffect(() => {
-    fetch('http://127.0.0.1:8000/tasks') // use your local FastAPI URL
+    fetch('https://task-manager-zjxa.onrender.com/tasks') // use your local FastAPI URL
       .then(res => res.json())
       .then(data => setTasks(data))
       .catch(err => console.error('Error fetching tasks:', err));
@@ -45,7 +45,7 @@ export default function Home() {
           onClick={async () => {
             const confirmed = confirm('Are you sure you want to delete this task?');
             if (!confirmed) return;
-            const res = await fetch(`http://127.0.0.1:8000/tasks/${task.id}`, {
+            const res = await fetch(`https://task-manager-zjxa.onrender.com/tasks/${task.id}`, {
               method: 'DELETE',
             });
             if (res.ok) {

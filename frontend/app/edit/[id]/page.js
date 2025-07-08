@@ -12,7 +12,7 @@ export default function EditTask() {
   });
 
   useEffect(() => {
-    fetch(`http://127.0.0.1:8000/tasks`)
+    fetch(`https://task-manager-zjxa.onrender.com/tasks`)
       .then(res => res.json())
       .then(data => {
         const task = data.find(t => t.id == id);
@@ -30,7 +30,7 @@ export default function EditTask() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const res = await fetch(`http://127.0.0.1:8000/tasks/${id}`, {
+    const res = await fetch(`https://task-manager-zjxa.onrender.com/tasks/${id}`, {
       method: 'PUT',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(formData),
