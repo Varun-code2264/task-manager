@@ -34,10 +34,10 @@ export default function Home() {
             onChange={(e) => setFilterStatus(e.target.value)}
             className="border p-1 rounded"
           >
-            <option value="all">All</option>
-            <option value="pending">Pending</option>
-            <option value="in progress">In Progress</option>
-            <option value="done">Done</option>
+            <option value="all" className="text-black">All</option>
+            <option value="pending" className="text-black">Pending</option>
+            <option value="in progress" className="text-black">In Progress</option>
+            <option value="done" className="text-black">Done</option>
           </select>
         </div>
 
